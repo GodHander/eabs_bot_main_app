@@ -1,0 +1,40 @@
+.mainContent {
+	width: 120rem;
+	height: 67.5rem;
+	background-color: aliceblue;
+}
+.fullWH {
+	width: 100%;
+	height: 100%;
+}
+.fullW {
+	width: 100%;
+}
+.fullH {
+	height: 100%;
+}
+.flexColumnWrap {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.flexRowWrap {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.normalBtn {
+	width: 10rem;
+	height: 1.5625rem;
+	margin: 0.1875rem;
+}
+.testBtn {
+	width: 8.125rem;
+	height: 1.875rem;
+	margin-left: 0.625rem;
+}
+
+

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NewEdu</string>
+
+
+    <string name="item_study">学习</string>
+    <string name="item_game">游戏</string>
+    <string name="item_music">音乐</string>
+    <string name="hotbitmapgg">edu</string>
+    <string name="login_hint_account">请输入账号</string>
+    <string name="login_hint_password">请输入你的密码</string>
+    <string name="login">登录</string>
+    <string name="wake_up_tip">你好主人，我是小勇, 我可以陪伴你，上下滑可以在我的脸与主菜单之间切换哦，试试吧</string>
+</resources>

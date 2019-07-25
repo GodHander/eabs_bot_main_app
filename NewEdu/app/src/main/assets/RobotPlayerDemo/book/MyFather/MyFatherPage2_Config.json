@@ -1,0 +1,245 @@
+{
+  "id": "CR1LHgqMk3NoT1mnJtPJpVJPqX6272d9",
+  "description": "'我爸爸'绘本序章页配置说明",
+  "resolution": 1,
+  "courseware_name": "我爸爸",
+  "courseware_id": "2485D66B64F0435fB34D5139864F4816",
+  "courseware_slice_list": [
+    {
+      "slice_number": 1,
+      "slice_name": "封面逻辑页",
+      "slice_id": "DKfW9fnP",
+      "page_number_list": [
+        1
+      ]
+    },
+    {
+      "slice_number": 2,
+      "slice_name": "逻辑页1",
+      "slice_id": "etZUJT3h",
+      "page_number_list": [
+        2
+      ]
+    },
+    {
+      "slice_number": 3,
+      "slice_name": "逻辑页2",
+      "slice_id": "k1Otf7TZ",
+      "page_number_list": [
+        3
+      ]
+    },
+	{
+      "slice_number": 4,
+      "slice_name": "逻辑页3",
+      "slice_id": "4AjgEzj8",
+      "page_number_list": [
+        4
+      ]
+    }
+  ],
+  "slice_number": 2,
+  "slice_name": "序章",
+  "slice_id": "c2qvQKvX",
+  "skippable": false,
+  "page_list":[
+	{
+	  "number": 2,
+	  "id": "o49PlAOj",
+	  "name": "'我爸爸物'绘本物理页2",
+	  "make_up_flag": false,
+	  "element_list": [
+		{
+		  "id": "9EuVKpAr",
+		  "name": "黄色格子",
+		  "keyword": "黄色格子背景图",
+		  "category": "background",
+		  "image_path": "XXX/XX.png",
+		  "content": "",
+		  "auto_guide": true,
+		  "tag_list": [],
+          "related_elements": [
+            {
+              "relationship": "parent_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "son_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "brother_of",
+              "element_id": "fMPuuSVb"
+            }
+          ],
+		  "location": [
+			[ 0, 0 ],
+			[ 1920, 1080 ]
+		  ],
+		  "question_list": [
+		    {
+              "id": "Nb1IkhZTaobk8MUN",
+              "content": "宝宝，这是什么图案呀？",
+              "tag_list": ["元素级", "图案"],
+              "question": {
+                "robot": [
+                  {
+                    "type": "tts",
+                    "parameters": { "speaker": "4" }
+                  },
+                  {
+                    "type": "image",
+                    "parameters": { "question_template": "2" }
+                  },
+                  {
+                    "type": "audio",
+                    "parameters": { "file_uri": "/storege/audio/good.wav" }
+                  }
+                ],
+                "user": [
+                  {
+                    "type": "asr",
+                    "parameters": null
+                  }
+                ]
+              },
+              "answer_feedback": {
+                "expect_answer": [
+                  {
+                    "type": "tts",
+                    "parameters": { "text": "这是黄色的格子图案" }
+                  }
+                ],
+                "expect_answer_suc": [
+                  {
+                    "type": "tts",
+                    "parameters": { "text": "答对了，真棒!" }
+                  }
+                ],
+                "expect_answer_fail": [
+                  {
+                    "type": "tts",
+                    "parameters": { "text": "真可惜，答错了!" }
+                  }
+                ]
+              }
+            }
+		  ]
+		}
+	  ],
+	  "question_list": [
+	    {
+		  "id": "dwAr2qO9Gb0aHR0x",
+		  "content": "宝宝，我们翻到下一页吧",
+		  "tag_list": [],
+		  "question": {
+			"robot": [
+			  {
+				"type": "tts",
+				"parameters": { "speaker": "4" }
+			  },
+			  {
+				"type": "image",
+				"parameters": { "question_template": "2" }
+			  },
+			  {
+				"type": "audio",
+				"parameters": { "file_uri": "/storege/audio/good.wav" }
+			  }
+			],
+			"user": [
+			  {
+				"type": "asr",
+				"parameters": null
+			  }
+			]
+		  },
+		  "answer_feedback": {
+			"expect_answer": [
+			  {
+				"type": "tts",
+				"parameters": { "text": "好的" }
+			  }
+			],
+			"expect_answer_suc": [
+			  {
+				"type": "tts",
+				"parameters": { "text": "好的!" }
+			  }
+			],
+			"expect_answer_fail": [
+			  {
+				"type": "tts",
+				"parameters": { "text": "好的!" }
+			  }
+			]
+		  }
+		},
+		{
+		  "id": "K5Fe4dJUf3lBp6S4",
+		  "content": "这像不像爸爸身上穿的睡衣呀？",
+		  "tag_list": ["元素级", "图案"],
+		  "question": {
+			"robot": [
+			  {
+				"type": "tts",
+				"parameters": { "speaker": "4" }
+			  },
+			  {
+				"type": "image",
+				"parameters": { "question_template": "2" }
+			  },
+			  {
+				"type": "audio",
+				"parameters": { "file_uri": "/storege/audio/good.wav" }
+			  }
+			],
+			"user": [
+			  {
+				"type": "asr",
+				"parameters": null
+			  }
+			]
+		  },
+		  "answer_feedback": {
+			"expect_answer": [
+			  {
+				"type": "tts",
+				"parameters": { "text": "像" }
+			  }
+			],
+			"expect_answer_suc": [
+			  {
+				"type": "tts",
+				"parameters": { "text": "回答正确, 真棒!" }
+			  }
+			],
+			"expect_answer_fail": [
+			  {
+				"type": "tts",
+				"parameters": { "text": "回答错误!" }
+			  }
+			]
+		  }
+		}
+	  ]
+	}
+  ],
+  "question_list": [],
+  "init_variable_list": [
+    {
+      "name": "全局变量1",
+      "type": "variable",
+      "init_value": "2"
+    },
+    {
+      "name": "全局变量数组2",
+      "type": "variablelist",
+      "init_value": ["数据1", "数据2", "数据3"]
+    }
+  ],
+  "store_variable_list": [
+    "全局变量1",
+    "全局变量数组2"
+  ]
+}

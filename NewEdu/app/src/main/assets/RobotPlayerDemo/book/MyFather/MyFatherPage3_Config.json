@@ -1,0 +1,526 @@
+{
+  "id": "qh38LJQWShvWYnSFAPPEuMfipXWEyXKM",
+  "description": "'我爸爸'绘本逻辑页3配置说明",
+  "resolution": 1,
+  "courseware_name": "我爸爸",
+  "courseware_id": "2485D66B64F0435fB34D5139864F4816",
+  "courseware_slice_list": [
+    {
+      "slice_number": 1,
+      "slice_name": "封面逻辑页",
+      "slice_id": "DKfW9fnP",
+      "page_number_list": [
+        1
+      ]
+    },
+    {
+      "slice_number": 2,
+      "slice_name": "逻辑页1",
+      "slice_id": "etZUJT3h",
+      "page_number_list": [
+        2
+      ]
+    },
+    {
+      "slice_number": 3,
+      "slice_name": "逻辑页2",
+      "slice_id": "k1Otf7TZ",
+      "page_number_list": [
+        3
+      ]
+    },
+	{
+      "slice_number": 4,
+      "slice_name": "逻辑页3",
+      "slice_id": "4AjgEzj8",
+      "page_number_list": [
+        4
+      ]
+    }
+  ],
+  "slice_number": 3,
+  "slice_name": "内容页1",
+  "slice_id": "dWpXGpes",
+  "skippable": false,
+  "page_list":[
+	{
+	  "number": 3,
+	  "id": "LCjCn9ir",
+	  "name": "'我爸爸物'绘本物理页3",
+	  "make_up_flag": false,
+	  "element_list": [
+		{
+		  "id": "JCo6lD22",
+		  "name": "背景图片",
+		  "keyword": "背景",
+		  "category": "background",
+		  "image_path": "XXX/XX.png",
+		  "content": "",
+		  "auto_guide": false,
+		  "tag_list": [],
+          "related_elements": [
+            {
+              "relationship": "parent_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "son_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "brother_of",
+              "element_id": "fMPuuSVb"
+            }
+          ],
+		  "location": [
+			[ 0, 0 ],
+			[ 1920, 1080 ]
+		  ],
+		  "question_list": []
+		},
+		{	
+		  "id": "PqSUiIjZ",
+		  "name": "面包机",
+		  "keyword": "机器|面包机",
+		  "category": "role",
+		  "image_path": "XXX/YY.png",
+		  "content": "",
+		  "auto_guide": true,
+		  "related_elements": {
+			"parent": [],
+			"brother": [],
+			"son": []
+		  },
+		  "location": [
+			[ 230, 50 ],
+			[ 450, 200 ]
+		  ],
+		  "question_list": []
+		},
+		{
+		  "id": "LimAk1oy",
+		  "name": "面包片",
+		  "keyword": "面包|面包片",
+		  "category": "role",
+		  "image_path": "XXX/YY1.png",
+		  "content": "",
+		  "auto_guide": true,
+		  "tag_list": [],
+          "related_elements": [
+            {
+              "relationship": "parent_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "son_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "brother_of",
+              "element_id": "fMPuuSVb"
+            }
+          ],
+		  "location": [
+			[ 230, 50 ],
+			[ 450, 200 ]
+		  ],
+		  "question_list": [
+		    {
+              "id": "ka5nGg2X1fK4ziQj",
+              "content": "你喜欢吃面包吗",
+              "tag_list": [ "元素级", "食物" ],
+              "question": {
+                "robot": [
+                  {
+                    "type": "tts",
+                    "parameters": { "speaker": "4" }
+                  },
+                  {
+                    "type": "image",
+                    "parameters": { "question_template": "2" }
+                  },
+                  {
+                    "type": "audio",
+                    "parameters": { "file_uri": "/storege/audio/good.wav" }
+                  }
+                ],
+                "user": [
+                  {
+                    "type": "asr",
+                    "parameters": null
+                  }
+                ]
+              },
+              "answer_feedback": {
+                "expect_answer": [
+                  {
+                    "type": "tts",
+                    "parameters": { "text": "面包机" }
+                  }
+                ],
+                "expect_answer_suc": [
+                  {
+                    "type": "tts",
+                    "parameters": { "text": "答对了，真棒!" }
+                  }
+                ],
+                "expect_answer_fail": [
+                  {
+                    "type": "tts",
+                    "parameters": { "text": "真可惜，答错了!" }
+                  }
+                ]
+              }
+            }
+		  ]
+		},
+		{	
+		  "id": "iCsxsK17",
+		  "name": "墙",
+		  "keyword": "墙|墙壁",
+		  "category": "role",
+		  "image_path": "XXX/YY.png",
+		  "content": "",
+		  "auto_guide": false,
+		  "tag_list": [],
+          "related_elements": [
+            {
+              "relationship": "parent_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "son_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "brother_of",
+              "element_id": "fMPuuSVb"
+            }
+          ],
+		  "location": [
+			[ 230, 50 ],
+			[ 450, 200 ]
+		  ],
+		  "question_list": []
+		},
+		{	
+		  "id": "eN53gJkZ",
+		  "name": "桌布",
+		  "keyword": "桌子|桌布",
+		  "category": "role",
+		  "image_path": "XXX/YY.png",
+		  "content": "",
+		  "auto_guide": false,
+		  "tag_list": [],
+          "related_elements": [
+            {
+              "relationship": "parent_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "son_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "brother_of",
+              "element_id": "fMPuuSVb"
+            }
+          ],
+		  "location": [
+			[ 230, 50 ],
+			[ 450, 200 ]
+		  ],
+		  "question_list": []
+		},
+		{	
+		  "id": "QIgBlMSG",
+		  "name": "画上的太阳",
+		  "keyword": "太阳|画|画上的太阳",
+		  "category": "role",
+		  "image_path": "XXX/YY.png",
+		  "content": "",
+		  "auto_guide": true,
+		  "tag_list": [],
+          "related_elements": [
+            {
+              "relationship": "parent_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "son_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "brother_of",
+              "element_id": "fMPuuSVb"
+            }
+          ],
+		  "location": [
+			[ 230, 50 ],
+			[ 450, 200 ]
+		  ],
+		  "question_list": []
+		},
+		{
+		  "id": "fEBKzef3",
+		  "name": "茶杯",
+		  "keyword": "水杯|茶杯|瓷杯",
+		  "category": "role",
+		  "image_path": "XXX/YY2.png",
+		  "content": "",
+		  "auto_guide": true,
+		  "tag_list": [],
+          "related_elements": [
+            {
+              "relationship": "parent_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "son_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "brother_of",
+              "element_id": "fMPuuSVb"
+            }
+          ],
+		  "location": [
+			[ 230, 50 ],
+			[ 450, 200 ]
+		  ],
+		  "question_list": [
+		    {
+              "id": "89hnwE4HgPJSgCzk",
+              "content": "宝宝，爸爸手里握着的是什么呀",
+              "tag_list": [],
+              "question": {
+                "robot": [
+                  {
+                    "type": "tts",
+                    "parameters": { "speaker": "4" }
+                  },
+                  {
+                    "type": "image",
+                    "parameters": { "question_template": "2" }
+                  },
+                  {
+                    "type": "audio",
+                    "parameters": { "file_uri": "/storege/audio/good.wav" }
+                  }
+                ],
+                "user": [
+                  {
+                    "type": "asr",
+                    "parameters": null
+                  }
+                ]
+              },
+              "answer_feedback": {
+                "expect_answer": [
+                  {
+                    "type": "tts",
+                    "parameters": { "text": "茶杯" }
+                  }
+                ],
+                "expect_answer_suc": [
+                  {
+                    "type": "tts",
+                    "parameters": { "text": "真棒，宝宝观察的真仔细!" }
+                  }
+                ],
+                "expect_answer_fail": [
+                  {
+                    "type": "tts",
+                    "parameters": { "text": "不对哦，这是茶杯!" }
+                  }
+                ]
+              }
+            }
+		  ]
+		},
+		{
+		  "id": "jNS2dSWx",
+		  "name": "书名",
+		  "keyword": "书名",
+		  "category": "text",
+		  "image_path": "",
+		  "content": "我爸爸",
+		  "auto_guide": false,
+		  "tag_list": [],
+          "related_elements": [
+            {
+              "relationship": "parent_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "son_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "brother_of",
+              "element_id": "fMPuuSVb"
+            }
+          ],
+		  "location": [
+			[ 230, 50 ],
+			[ 450, 200 ]
+		  ],
+		  "question_list": []
+		},
+		{
+		  "id": "JoKySzBH",
+		  "name": "作者",
+		  "keyword": "作者",
+		  "category": "text",
+		  "image_path": "",
+		  "content": "作者：[英]安东尼布朗",
+		  "auto_guide": false,
+		  "tag_list": [],
+          "related_elements": [
+            {
+              "relationship": "parent_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "son_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "brother_of",
+              "element_id": "fMPuuSVb"
+            }
+          ],
+		  "location": [
+			[ 230, 50 ],
+			[ 450, 200 ]
+		  ],
+		  "question_list": []
+		},
+		{
+		  "id": "s72mM7yn",
+		  "name": "翻译",
+		  "keyword": "翻译",
+		  "category": "text",
+		  "image_path": "",
+		  "content": "翻译：余治莹",
+		  "auto_guide": false,
+		  "tag_list": [],
+          "related_elements": [
+            {
+              "relationship": "parent_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "son_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "brother_of",
+              "element_id": "fMPuuSVb"
+            }
+          ],
+		  "location": [
+			[ 230, 50 ],
+			[ 450, 200 ]
+		  ],
+		  "question_list": []
+		},
+		{
+		  "id": "MRs09AdB",
+		  "name": "真棒的爸爸",
+		  "keyword": "我爸爸|握着茶杯的人",
+		  "category": "text",
+		  "image_path": "",
+		  "content": "这是我爸爸，他真的很棒",
+		  "auto_guide": false,
+		  "tag_list": [],
+          "related_elements": [
+            {
+              "relationship": "parent_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "son_of",
+              "element_id": "fMPuuSVb"
+            },
+            {
+              "relationship": "brother_of",
+              "element_id": "fMPuuSVb"
+            }
+          ],
+		  "location": [
+			[ 230, 50 ],
+			[ 450, 200 ]
+		  ],
+		  "question_list": []
+		}
+	  ],
+	  "question_list": [
+	    {
+		  "id": "dwAr2qO9Gb0aHR0x",
+		  "content": "宝宝，我们翻到下一页吧",
+		  "tag_list": [],
+		  "question": {
+			"robot": [
+			  {
+				"type": "tts",
+				"parameters": { "speaker": "4" }
+			  },
+			  {
+				"type": "image",
+				"parameters": { "question_template": "2" }
+			  },
+			  {
+				"type": "audio",
+				"parameters": { "file_uri": "/storege/audio/good.wav" }
+			  }
+			],
+			"user": [
+			  {
+				"type": "asr",
+				"parameters": null
+			  }
+			]
+		  },
+		  "answer_feedback": {
+			"expect_answer": [
+			  {
+				"type": "tts",
+				"parameters": { "text": "好的" }
+			  }
+			],
+			"expect_answer_suc": [
+			  {
+				"type": "tts",
+				"parameters": { "text": "好的!" }
+			  }
+			],
+			"expect_answer_fail": [
+			  {
+				"type": "tts",
+				"parameters": { "text": "好的!" }
+			  }
+			]
+		  }
+		}
+	  ]
+	}
+  ],
+  "question_list": [],
+  "init_variable_list": [
+    {
+      "name": "全局变量1",
+      "type": "variable",
+      "init_value": "2"
+    },
+    {
+      "name": "全局变量数组2",
+      "type": "variablelist",
+      "init_value": ["数据1", "数据2", "数据3"]
+    }
+  ],
+  "store_variable_list": [
+    "全局变量1",
+    "全局变量数组2"
+  ]
+}
