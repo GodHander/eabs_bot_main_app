@@ -64,8 +64,8 @@ public class AndroidInterface {
                     if(needReceive) {
                         HardwareService.getInstance().startTts(text, new EduInterface.TTsCallBack() {
                             @Override
-                            public void onTtsStart() {
-                                mSuperWeb.getJsEntraceAccess().quickCallJs("appEventHandler", "ttsStatusEvent", "{\"type\": "+0+",\"failReason\": \"\",\"param\": {\"process\": \"\"}}");
+                            public void onTtsStart(int takeUpTime) {
+                                mSuperWeb.getJsEntraceAccess().quickCallJs("appEventHandler", "ttsStatusEvent", "{\"type\": "+0+",\"failReason\": \"\",\"param\": {\"takeUpTime\": "+ takeUpTime +"}}");
                             }
                             @Override
                             public void onTtsProgressChanged(int i) {
@@ -89,6 +89,11 @@ public class AndroidInterface {
                 }
             }
 //        });
+
+        if (funcName.equals("stopTts")) { //停止tts播报
+            Log.d(TAG, "playerEventHandler: -- stopTts");
+            HardwareService.getInstance().stopTts();
+        }
 
         if (funcName.equals("openPageByNO")) { //播报器请求打开指定页码的文件
             Log.d(TAG, "callAndroidMethod: -- openPageByNO");

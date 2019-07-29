@@ -122,7 +122,7 @@ public interface EduInterface {
         /**
          * 开始播报状态回调
          */
-        void onTtsStart();
+        void onTtsStart(int takeUpTime);
 
         /**
          *  正在播报状态回调

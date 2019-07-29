@@ -40,6 +40,7 @@ public class TtsManagerImpl implements TtsManager {
     private static volatile TtsManagerImpl instance;
     private SpeechSynthesizer mSpeechSynthesizer;
     private EduInterface.TTsCallBack ttsCallBack;
+    private byte[] totalBytes = null; // 用来记录本次播报合成的音频数据(计算耗时用-百度TTS使用16000采样率16bits编码的pcm)
     private Handler mH = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -55,7 +56,7 @@ public class TtsManagerImpl implements TtsManager {
                     mH.sendMessageDelayed(msg2,CHECK_DELAY);
                 }else {
                     Log.d(TAG,"handle speech:"+item.getText());
-                    speaks(item.getText(),item.gettTsCallBack());
+                    speaks(item.getText(),item.getResultCallback());
                 }
             }
         }
@@ -109,26 +110,39 @@ public class TtsManagerImpl implements TtsManager {
             @Override
             public void onSynthesizeStart(String s) {
                 Log.e(TAG, "TTS onSynthesizeStart：" + s);
-
-                if(ttsCallBack != null)
-                    ttsCallBack.onTtsStart();
-
-                if(ttsIng) {
-                    startTTs = true;
-                }else{
-                    startTTs = false;
-                }
+                // 合成前清空
+                totalBytes = null;
             }
             // 正在合成
             @Override
             public void onSynthesizeDataArrived(String s, byte[] bytes, int i) {
                 Log.e(TAG, "TTS onSynthesizeDataArrived：" + i);
+                // 合成过程中不断累加数据
+                if (totalBytes == null) {
+                    totalBytes = bytes;
+                } else {
+                    totalBytes = addBytes(totalBytes, bytes);
+                }
             }
 
             // 合成完成
             @Override
             public void onSynthesizeFinish(String s) {
                 Log.e(TAG, "TTS onSynthesizeFinish：" + s);
+
+                // 合成完成计算总耗时
+                int takeUpTime = totalBytes.length/32;
+                Log.e(TAG, "朗读大约需要耗时毫秒数: " + takeUpTime);
+
+                // 将耗时时间传给前端
+                if(ttsCallBack != null)
+                    ttsCallBack.onTtsStart(takeUpTime);
+
+                if(ttsIng) {
+                    startTTs = true;
+                }else{
+                    startTTs = false;
+                }
             }
 
             // 播报完成
@@ -210,15 +224,17 @@ public class TtsManagerImpl implements TtsManager {
 
     @Override
     public void speaks(String message, EduInterface.TTsCallBack callBack) {
-        Log.e(TAG,"调用语音合成结束");
+        Log.e(TAG,"准备播报新的任务！");
         if(ttsIng){
+            // 停止正在播报的旧任务
+            mSpeechSynthesizer.stop();
+            ttsIng = false;
+            // 创建新的任务
             Message msg = new Message();
             msg.what = 0;
             SpeechItem item = new SpeechItem(message,callBack);
             msg.obj = item;
             mH.sendMessageDelayed(msg,CHECK_DELAY);
-            mSpeechSynthesizer.stop();
-            ttsIng = false;
             return;
         }
         this.ttsCallBack = callBack;
@@ -230,7 +246,8 @@ public class TtsManagerImpl implements TtsManager {
 
     @Override
     public void stop() {
-            mSpeechSynthesizer.stop();
+        mSpeechSynthesizer.stop();
+        ttsIng = false;
     }
 
     @Override
@@ -244,19 +261,26 @@ public class TtsManagerImpl implements TtsManager {
     }
     private class SpeechItem {
         private String text;
-        private EduInterface.TTsCallBack tTsCallBack;
+        private EduInterface.TTsCallBack resultCallback;
         public SpeechItem(String text, EduInterface.TTsCallBack callBack){
             this.text = text;
-            ttsCallBack = callBack;
+            this.resultCallback = callBack;
         }
 
         public String getText() {
             return text;
         }
 
-        public EduInterface.TTsCallBack gettTsCallBack() {
-            return tTsCallBack;
+        public EduInterface.TTsCallBack getResultCallback() {
+            return resultCallback;
         }
+    }
+
+    private byte[] addBytes(byte[] data1, byte[] data2) {
+        byte[] data3 = new byte[data1.length + data2.length];
+        System.arraycopy(data1, 0, data3, 0, data1.length);
+        System.arraycopy(data2, 0, data3, data1.length, data2.length);
+        return data3;
     }
 
 }
